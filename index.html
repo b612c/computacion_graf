@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Neon Snake</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div id="game-wrapper">
+        <header>
+            <h1>Snake</h1>
+            <div class="score-board">
+                <div>Puntos: <span id="score-display">0</span></div>
+            </div>
+        </header>
+
+        <div id="canvas-container">
+            <!-- Start Screen -->
+            <div id="start-screen" class="overlay">
+                <h2>Listo?</h2>
+                <p>Usa las flechas para moverte.</p>
+                <button id="start-btn">Iniciar</button>
+            </div>
+
+            <!-- Game Over Screen -->
+            <div id="game-over-screen" class="overlay hidden">
+                <h2 class="game-over-text">Game Over</h2>
+                <p>Puntuación final: <span id="final-score">0</span></p>
+                <button id="restart-btn">Jugar de nuevo</button>
+            </div>
+
+            <canvas id="gameCanvas" width="400" height="400"></canvas>
+        </div>
+
+        <!-- Mobile Controls -->
+        <div class="controls">
+            <button class="control-btn" id="btn-up">▲</button>
+            <button class="control-btn" id="btn-left">◀</button>
+            <button class="control-btn" id="btn-right">▶</button>
+            <button class="control-btn" id="btn-down">▼</button>
+        </div>
+    </div>
+
+    <audio id="audioComer" src="./assets/sounds/eat.mp3" preload="auto"></audio>
+    <audio id="audioChoque" src="./assets/sounds/crash.mp3" preload="auto"></audio>
+    <script src="js/code.js"></script>
+
+</body>
+</html>
